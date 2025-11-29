@@ -1,0 +1,35 @@
+/* style.css content */
+
+/* 1. Overall Page Styling */
+body {
+    background-color: #F0F8FF; /* Light blue/white */
+    font-family: Arial, sans-serif;
+    padding: 20px;
+}
+
+/* 2. Logo Styling */
+.logo {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* 3. Optional: Center the main content and clean up links */
+main {
+    max-width: 800px;
+    margin: 0 auto; /* Centers the content block */
+    background-color: white; /* gives the content a white box on the light blue background */
+    padding: 20px;
+}
+
+/* Link Styling */
+a {
+    color: #007bff; /* A nice blue for links */
+    text-decoration: none; /* Removes the underline */
+}
+
+a:hover {
+    text-decoration: underline; /* Shows underline on hover */
+}
