@@ -445,3 +445,92 @@ section h2 {
         padding: 10px 0;
     }
 }
+
+/* Contact form visual enhancements */
+/* 1. Container Padding and Appearance */
+.contact-form-container {
+    background-color: #343a40; /* Match the dark gray/blue from the image */
+    padding: 20px; /* Add internal space around the content */
+    margin-bottom: 20px; /* Space between the form and the quick links */
+    border-radius: 6px; /* Optional: adds subtle rounding to the corners */
+}
+
+/* 2. Header Alignment (Send Me a Message) */
+.contact-form-container h3 {
+    color: white; /* Make the heading text stand out */
+    margin-top: 0; /* Remove default top margin */
+    margin-bottom: 18px; /* Space below the header */
+    padding-bottom: 8px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.06); /* Subtle divider */
+}
+
+/* 3. Input Alignment and label styling */
+.contact-form-container label,
+.contact-form-container .form-group-label {
+    display: block;
+    color: #ffffff;
+    padding: 6px 0; /* Add top/bottom padding to the label text */
+    margin-top: 12px; /* Space above each label block */
+    font-weight: 600;
+}
+
+.contact-form-container input[type="text"],
+.contact-form-container input[type="email"],
+.contact-form-container textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid rgba(255,255,255,0.08);
+    border-radius: 4px;
+    background: #ffffff;
+    color: #222;
+    margin-bottom: 8px;
+}
+
+/* 4. Button Alignment */
+.contact-form-container button[type="submit"],
+.contact-form-container .button_1 {
+    display: block; /* Make the button take full width */
+    width: 100%; /* Stretch */
+    padding: 10px;
+    margin-top: 14px; /* Space above the button */
+    background: #e8491d; /* Orange/red background to match branding */
+    color: #ffffff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+.contact-form-container button[type="submit"]:hover,
+.contact-form-container .button_1:hover {
+    background: #d43d15;
+}
+
+/* Quick links panel styling */
+.quick-links-container {
+    background-color: #343a40; /* Match the dark gray/blue */
+    padding: 20px; /* Adds internal space around the content */
+    border-radius: 6px;
+}
+
+.quick-links-container h3 {
+    color: white;
+    margin-top: 0;
+    margin-bottom: 12px; /* Space below the header */
+}
+
+.quick-links-container ul {
+    list-style: none; /* Remove bullet points */
+    padding: 0; /* Remove default left padding from the list */
+    margin: 0;
+}
+
+.quick-links-container li a {
+    color: #a0a0a0; /* Example link color */
+    text-decoration: none;
+    display: block; /* Make the link a block element for full width clicking */
+    padding: 6px 0; /* Add vertical space between the links */
+}
+
+.quick-links-container li a:hover {
+    color: white; /* Hover effect */
+}
