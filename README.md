@@ -1,9 +1,9 @@
-Olayanju Blessing Jeremiah — Portfolio
+Olayiwola — Portfolio
 =====================================
 
 About
 -----
-This is a personal portfolio website for Olayanju Blessing Jeremiah. It showcases skills, projects, and contact information. The site is a simple static website built with semantic HTML and basic CSS.
+This is a personal portfolio website for Olayiwola. It showcases skills, projects, and contact information. The site is a simple static website built with semantic HTML and basic CSS.
 
 Highlights
 ----------
