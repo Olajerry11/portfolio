@@ -13,54 +13,72 @@
 <body>
 
     <header>
+        <div class="container">
+         <div id="branding">
         <img src="my-logo.png" alt="Olayanju's Logo" class="logo">
-        <h1>Olayanju Blessing Jeremiah</h1>
-        <p>Aspiring Web Developer & Problem Solver</p>
+        <h1><span class="highlight">Olayanju Blessing Jeremiah</span>Web Design</h1>
+        </div>
+        <p>Senior Web Developer & Problem Solver</p>
         <nav>
-            <a href="#about">About</a> |
-            <a href="#skills">Skills</a> |
-            <a href="#experience">Experience</a> |
-            <a href="#contact">Contact</a>
+            <ul>
+                <li class="current"><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="services.html">Services</a></li>
+                <li><a href="skills.html">Skills</a></li>
+                <li><a href="experience.html">Experience</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
         </nav>
+     </div>
     </header>
 
-    <main>
-        <section id="about">
-            <h2>About Me</h2>
-            <p>
-                As a student of Joseph Ayo Babalola University Ike-Araki studying computer science, I am passionate about growing in web development. I aim to solve real-world problems with the skills I'm building and impact younger generations through technology. I'm committed to leveraging my expertise to influence the world positively.
-            </p>
-            <p>
-                I am currently working on mastering **HTML** and look forward to diving into **CSS** and **JavaScript**.
-            </p>
+        <section id="showcase">
+            <div id="container">
+                <h1>Affordable Professional Web Design</h1>
+                <p>As a student of Joseph Ayo Babalola University Ike-Araki studying computer science, I am passionate about growing in web development. I aim to solve real-world problems with the skills I'm building and impact younger generations through technology. I'm committed to leveraging my expertise to influence the world positively.</p>
+            </div>
         </section>
 
-        <section id="skills">
-            <h2>Skills</h2>
-            <ul>
-                <li><strong>Markup:</strong> HTML5 (Fundamental)</li>
-                <li><strong>Languages:</strong> Python (beginner), JavaScript (learning), C++ (exploring)</li>
-                <li><strong>Tools:</strong> VSCode, Sublime Text, Acode Editor</li>
-            </ul>
-        </section>
+            <section id="contact">
+                <div class="container">
+                    <h1>Patronize us</h1>
+                    <form>
+                        <input type="email" placeholder="Enter Email..." required>
+                        <button type="submit" class="button_1">Subscribe</button>  
+                    </form>
+                </div>
+            </section>
 
-        <section id="experience">
-            <h2>Experience & Projects</h2>
-            <article>
-                <h3>Portfolio Website (Current Project)</h3>
-                <p>
-                    <strong>Problem Solved:</strong> Created a structured and accessible portfolio website using semantic HTML to clearly present my professional and educational background.
-                </p>
-                <p><strong>Technologies Used:</strong> HTML5</p>
-            </article>
-        </section>
-    </main>
+            <section id="boxes">
+                <div class="box">
+                    <img src="./imag/logo_html.png">
+                    <h3>HTML5 Markup</h3>
+                    <p>Building the structure of web pages using semantic HTML5 elements for better accessibility and SEO.</p>
+                </div>
+                <div class="box">
+                    <img src="./imag/logo_css.png">
+                    <h3>CSS3 Styling</h3>
+                    <p>Designing visually appealing and responsive web pages using modern CSS3 techniques and frameworks.</p>
+                </div>
+                <div class="box">
+                    <img src="./imag/logo_js.png">
+                    <h3>JavaScript Interactivity</h3>
+                    <p>Enhancing user experience by adding interactivity and dynamic content using JavaScript and popular libraries.</p>
+                </div>
+                <div class="box">
+                    <img src="./imag/logo_python.png">
+                    <h3>Python Programming</h3>
+                    <p>Developing backend functionalities and web applications using Python frameworks like Django and Flask.</p>
+                </div>
+                <div class="box">
+                    <img src="./imag/logo_cpp.png">
+                    <h3>Graphics Design</h3>
+                    <p>Creating high-performance graphics design flyers.</p>
+                </div>
+            </section>
 
-    <footer id="contact">
-        <h2>Contact Me</h2>
-        <p>Email: <a href="mailto:jeremiahblessing931@gmail.com">jeremiahblessing931@gmail.com</a></p>
-        <p>LinkedIn: <a href="#">Add your LinkedIn profile link</a></p>
-    </footer>
-
-</body>
+        <footer>
+            <p>Olayiwola Web Design, Copywright & Copy; 2025</p>
+        </footer>
+  </body>
 </html>
