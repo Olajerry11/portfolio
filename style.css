@@ -360,6 +360,9 @@ section h2 {
         border-bottom: 2px solid #e8491d;
         padding-bottom: 5px;
     }
+
+    /* Reduce hero title on small screens */
+    #showcase h1 {
         font-size: 32px;
     }
 
