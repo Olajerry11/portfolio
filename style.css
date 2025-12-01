@@ -104,16 +104,16 @@ header #branding .logo {
     object-fit: cover;
 }
 
-header nav{
-    margin-top: 0;
-}
+    header nav ul{
+        display: flex;
+        gap: 12px;
+        align-items: center;
+        /* Allow navigation items to wrap if there are many */
+        flex-wrap: wrap; 
+        justify-content: center;
+    }
 
-header .highlight, header .current a{
-    color: #e8491d;
-    font-weight: bold;
 }
-
-header a:hover{
     color: #cccccc;
     font-weight: bold;
 }
