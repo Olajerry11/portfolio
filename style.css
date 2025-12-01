@@ -263,6 +263,25 @@ article#main-col h1 {
     margin-bottom: 20px;
 }
 
+/* Use flex layout for the main/content area so the sidebar and article align reliably */
+main .container {
+    display: flex;
+    gap: 20px;
+    align-items: flex-start;
+    justify-content: space-between;
+}
+
+/* When using flex above, avoid float interference */
+main .container article#main-col {
+    float: none;
+    width: 65%;
+}
+
+main .container aside#sidebar {
+    float: none;
+    width: 32%;
+}
+
 /* Services */
 ul#services li{
     list-style: none;
