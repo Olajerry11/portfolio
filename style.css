@@ -78,8 +78,15 @@ header li a:hover {
     padding-bottom: 5px;
 }
 
+/* Header layout: use flexbox for reliable alignment */
+header .container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
 header #branding{
-    float: left;
     display: flex;
     align-items: center;
     gap: 15px;
@@ -91,14 +98,14 @@ header #branding h1{
 }
 
 header #branding .logo {
-    width: 50px;
-    height: 50px;
-    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    border-radius: 8px;
+    object-fit: cover;
 }
 
 header nav{
-    float: right;
-    margin-top: 10px;
+    margin-top: 0;
 }
 
 header .highlight, header .current a{
@@ -333,17 +340,26 @@ section h2 {
         width: 100%;
     }
 
-    header{
-        padding-bottom: 20px;
+    header nav ul{
+        display: flex;
+        gap: 12px;
+        align-items: center;
     }
 
-    header #branding {
-        justify-content: center;
-        margin-bottom: 15px;
+    header nav li{
+        list-style: none;
     }
 
-    #showcase h1{
-        margin-top: 40px;
+    header nav li a{
+        display: inline-block;
+        padding: 8px 12px;
+    }
+
+    header nav li a:hover {
+        color: #e8491d;
+        border-bottom: 2px solid #e8491d;
+        padding-bottom: 5px;
+    }
         font-size: 32px;
     }
 
