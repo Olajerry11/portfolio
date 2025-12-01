@@ -26,7 +26,7 @@ All images go in: **`image_files/`** (create if it doesn't exist)
 - **Where to get:**
   - Design your own in Canva (free): https://www.canva.com
   - OR use a logo maker: https://looka.com or https://brandmark.io
-  - OR use initials: "OBJ" (Olayanju Blessing Jeremiah)
+  - OR use initials: "O" or "Olayiwola"
 - **Folder:** `image_files/my-logo.png`
 - **Note:** This is in your root already but should ideally be in `image_files/`
 
