@@ -8,529 +8,537 @@ body{
 
 /* Global */
 .container{
-    width:80%;
-    margin:auto;
-    overflow: hidden;
-}
-
-ul{
-    margin: 0;
-    padding: 0;
-    list-style: none;
-}
-
-a {
-    transition: all 0.3s ease;
-}
-
-.button_1{
-    height: 38px;
-    background: #e8491d;
-    border: 0;
-    padding-left: 20px;
-    padding-right: 20px;
-    color: #ffffff;
-    cursor: pointer;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background 0.3s ease;
-}
-
-.button_1:hover {
-    background: #d43d15;
-    transform: scale(1.05);
-}
-
-.dark{
-    padding: 15px;
-    background: #35424a;
-    color: #ffffff;
-    margin-top: 10px;
-    margin-bottom: 10px;
-}
-
-/* Header */
-header{
-    background: #35424a;
-    color: #ffffff;
-    padding-top: 30px;
-    min-height: 70px;
-    border-bottom: #e8491d 3px solid;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-}
-
-header a{
-    color: #ffffff;
-    text-decoration: none;
-    text-transform: uppercase;
-    font-size: 16px;
-}
-
-header li{
-    float: left;
-    display: inline;
-    padding: 0 20px 0 20px;
-}
-
-header li a:hover {
-    color: #e8491d;
-    border-bottom: 2px solid #e8491d;
-    padding-bottom: 5px;
-}
-
-/* Header layout: use flexbox for reliable alignment */
-header .container{
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 20px;
-}
-
-header #branding{
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-header #branding h1{
-    margin: 0;
-    font-size: 28px;
-}
-
-header #branding .logo {
-    width: 60px;
-    height: 60px;
-    border-radius: 8px;
-    object-fit: cover;
-}
-
-    header nav ul{
-        display: flex;
-        gap: 12px;
-        align-items: center;
-        /* Allow navigation items to wrap if there are many */
-        flex-wrap: wrap; 
-        justify-content: center;
+    body{
+        font: 15px/1.5 Arial, Helvetica, sans-serif;
+        padding:0;
+        margin:0;
+        background-color:#f4f4f4;
+        color: #333;
     }
 
-}
-    color: #cccccc;
-    font-weight: bold;
-}
-
-/* Showcase */
-#showcase{
-    min-height: 400px;
-    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image_files/showcase.jpg') center/cover no-repeat;
-    text-align: center;
-    color: #ffffff;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-#showcase .container {
-    text-align: center;
-}
-
-#showcase h1{
-    margin-top: 0;
-    font-size: 55px;
-    margin-bottom: 10px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
-}
-
-#showcase p{
-    font-size: 20px;
-    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
-    line-height: 1.8;
-}
-
-/* Contact Section */
-#contact{
-    padding: 25px;
-    color: #ffffff;
-    background: linear-gradient(135deg, #35424a 0%, #2a3338 100%);
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    border-top: 3px solid #e8491d;
-}
-
-#contact h1{
-    margin: 0;
-    font-size: 28px;
-}
-
-#contact form {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-}
-
-#contact input[type="email"]{
-    padding: 10px;
-    height: 40px;
-    width: 300px;
-    border: none;
-    border-radius: 4px;
-    font-size: 14px;
-}
-
-#contact input[type="email"]::placeholder {
-    color: #999;
-}
-
-/* Boxes / Services */
-#boxes{
-    margin-top: 20px;
-    margin-bottom: 20px;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px;
-    padding: 20px 0;
-    justify-content: center;
-}
-
-/* Also support #services container (used for the services list) */
-#services {
-    display: flex; /* Use Flexbox for easy layout */
-    flex-wrap: wrap; /* Allows items to wrap onto a new line on smaller screens */
-    justify-content: center; /* Centers the boxes horizontally */
-    gap: 20px; /* Adds space between the boxes */
-    padding: 20px 0;
-}
-
-#boxes .box{
-    /* Use flexible boxes so they wrap nicely */
-    flex: 1 1 300px; /* grow | shrink | basis. sets a good minimum width */
-    max-width: 350px; /* Prevents boxes from getting too wide */
-    padding: 20px;
-    background: #f4f4f4; /* Light background for the box */
-    margin-bottom: 20px; /* Space below the box */
-    text-align: center;
-    border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-}
-
-#boxes .box:hover {
-    transform: translateY(-10px);
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
-}
-
-#boxes .box img {
-    width: 60px; /* Standard size for icons */
-    height: auto;
-    margin-bottom: 10px;
-    object-fit: contain;
-}
-
-#boxes .box h3 {
-    margin: 15px 0;
-    color: #35424a;
-    font-size: 22px;
-}
-
-#boxes .box p {
-    color: #666;
-    line-height: 1.6;
-}
-
-/* Sidebar */
-aside#sidebar{
-    float: right;
-    width: 30%;
-    margin-top: 10px;
-    padding: 20px;
-    background: #ffffff;
-    border-radius: 8px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-}
-
-aside#sidebar .quote input, aside#sidebar .quote textarea{
-    width: 100%;
-    padding: 10px;
-    margin-bottom: 10px;
-    border: 1px solid #ddd;
-    border-radius: 4px;
-}
-
-/* Main-col */
-article#main-col{
-    float: left;
-    width: 65%;
-    padding: 20px;
-}
-
-article#main-col h1 {
-    margin-top: 0;
-    color: #35424a;
-    margin-bottom: 20px;
-}
-
-/* Use flex layout for the main/content area so the sidebar and article align reliably */
-main .container {
-    display: flex;
-    gap: 20px;
-    align-items: flex-start;
-    justify-content: space-between;
-}
-
-/* When using flex above, avoid float interference */
-main .container article#main-col {
-    float: none;
-    width: 65%;
-}
-
-main .container aside#sidebar {
-    float: none;
-    width: 32%;
-}
-
-/* Services */
-ul#services li{
-    list-style: none;
-    padding: 20px;
-    border: #e8491d solid 2px;
-    margin-bottom: 10px;
-    background: #f9f9f9;
-    border-radius: 4px;
-    transition: all 0.3s ease;
-}
-
-ul#services li:hover {
-    background: #fff;
-    border-color: #35424a;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-ul#services li h4 {
-    color: #e8491d;
-    margin-bottom: 8px;
-}
-
-/* Footer */
-footer{
-    padding: 20px;
-    margin-top: 20px;
-    color: #ffffff;
-    background-color: #35424a;
-    text-align: center;
-    border-top: 3px solid #e8491d;
-}
-
-footer p {
-    margin: 0;
-}
-
-/* Page Titles */
-.page-title {
-    background: linear-gradient(135deg, #35424a 0%, #2a3338 100%);
-    color: #ffffff;
-    padding: 40px 20px;
-    text-align: center;
-    margin-bottom: 30px;
-}
-
-.page-title h1 {
-    margin: 0;
-    font-size: 40px;
-}
-
-/* Sections */
-section {
-    margin: 20px 0;
-}
-
-section h2 {
-    color: #35424a;
-    margin-bottom: 20px;
-    padding-bottom: 10px;
-    border-bottom: 2px solid #e8491d;
-}
-
-/* Media Queries */
-@media(max-width: 768px){
-    header #branding,
-    header nav,
-    header nav li,
-    #contact h1,
-    #contact form,
-    #boxes .box,
-    article#main-col,
-    aside#sidebar{
-        float: none;
-        text-align: center;
-        width: 100%;
+    /* Global */
+    .container{
+        width:80%;
+        margin:auto;
+        overflow: hidden;
     }
 
-    header nav ul{
-        display: flex;
-        gap: 12px;
-        align-items: center;
-    }
-
-    header nav li{
+    ul{
+        margin: 0;
+        padding: 0;
         list-style: none;
     }
 
-    header nav li a{
-        display: inline-block;
-        padding: 8px 12px;
+    a {
+        transition: all 0.3s ease;
     }
 
-    header nav li a:hover {
+    .button_1{
+        height: 38px;
+        background: #e8491d;
+        border: 0;
+        padding-left: 20px;
+        padding-right: 20px;
+        color: #ffffff;
+        cursor: pointer;
+        border-radius: 5px;
+        font-weight: bold;
+        transition: background 0.3s ease;
+    }
+
+    .button_1:hover {
+        background: #d43d15;
+        transform: scale(1.05);
+    }
+
+    .dark{
+        padding: 15px;
+        background: #35424a;
+        color: #ffffff;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        border-radius: 8px; /* Added border-radius for consistency */
+    }
+
+    /* Header */
+    header{
+        background: #35424a;
+        color: #ffffff;
+        padding-top: 30px;
+        min-height: 70px;
+        border-bottom: #e8491d 3px solid;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    header a{
+        color: #ffffff;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 16px;
+    }
+
+    header li{
+        float: left;
+        display: inline;
+        padding: 0 20px 0 20px;
+    }
+
+    header li a:hover {
         color: #e8491d;
         border-bottom: 2px solid #e8491d;
         padding-bottom: 5px;
     }
 
-    /* Reduce hero title on small screens */
-    #showcase h1 {
-        font-size: 32px;
-    }
-
-    #showcase p {
-        font-size: 16px;
-    }
-
-    #contact {
-        flex-direction: column;
+    /* Header layout: use flexbox for reliable alignment */
+    header .container{
+        display: flex;
+        /* Changed from space-between to column on small screen, but keep it versatile */
+        flex-wrap: wrap; 
+        align-items: center;
+        justify-content: space-between;
         gap: 15px;
     }
 
+    header #branding{
+        display: flex;
+        align-items: center;
+        gap: 15px;
+    }
+
+    header #branding h1{
+        margin: 0;
+        font-size: 28px;
+    }
+
+    header #branding .logo {
+        width: 60px;
+        height: 60px;
+        border-radius: 8px;
+        object-fit: cover;
+    }
+
+    header nav{
+        margin-top: 0;
+    }
+
+    /* --- THE COLOR FIX IS HERE --- */
+    header .highlight, 
+    header .current a{
+        /* Highlight color: Changed from red/orange to white/light grey as requested by "nothing has changed except of the color of olayiwola in the title page" */
+        color: #ffffff; 
+        font-weight: bold;
+    }
+    /* Ensure links and general text colors are still visible */
+    header a:hover{
+        color: #e8491d; /* Orange/red hover effect */
+        font-weight: bold;
+    }
+    /* --- END COLOR FIX --- */
+
+
+    /* Showcase */
+    #showcase{
+        min-height: 400px;
+        background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('image_files/showcase.jpg') center/cover no-repeat;
+        text-align: center;
+        color: #ffffff;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    #showcase .container {
+        text-align: center;
+    }
+
+    #showcase h1{
+        margin-top: 0;
+        font-size: 55px;
+        margin-bottom: 10px;
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+    }
+
+    #showcase p{
+        font-size: 20px;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.7);
+        line-height: 1.8;
+    }
+
+    /* Contact Section (Subscription/Newsletter) */
+    #contact{
+        padding: 25px;
+        color: #ffffff;
+        background: linear-gradient(135deg, #35424a 0%, #2a3338 100%);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        border-top: 3px solid #e8491d;
+    }
+
+    #contact h1{
+        margin: 0;
+        font-size: 28px;
+    }
+
     #contact form {
-        flex-direction: column;
-        width: 100%;
+        display: flex;
+        gap: 10px;
+        align-items: center;
     }
 
-    #contact input[type="email"] {
-        width: 100%;
+    #contact input[type="email"]{
+        padding: 10px;
+        height: 40px;
+        width: 300px;
+        border: none;
+        border-radius: 4px;
+        font-size: 14px;
     }
 
-    #contact button, .quote button{
-        display: block;
-        width: 100%;
+    #contact input[type="email"]::placeholder {
+        color: #999;
     }
 
-    #contact form input[type="email"], .quote input, .quote textarea{
-        width: 100%;
-        margin-bottom: 5px;
-    }
-
-    #boxes {
-        flex-direction: column;
-    }
-
-    /* On small screens, let each box take full width */
-    #boxes .box {
-        flex: 1 1 100%;
-        max-width: 90%;
-    }
-
-    aside#sidebar {
+    /* Boxes / Services */
+    #boxes{
         margin-top: 20px;
+        margin-bottom: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        gap: 20px;
+        padding: 20px 0;
+        justify-content: center;
     }
 
-    nav ul {
+    #boxes .box{
+        flex: 1 1 300px; 
+        max-width: 350px; 
+        padding: 20px;
+        background: #f4f4f4; 
+        margin-bottom: 20px; 
+        text-align: center;
+        border-radius: 8px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); 
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+        display: flex;
         flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 
-    header nav ul li {
-        padding: 10px 0;
+    #boxes .box:hover {
+        transform: translateY(-10px);
+        box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2);
     }
-}
 
-/* Contact form visual enhancements */
-/* 1. Container Padding and Appearance */
-.contact-form-container {
-    background-color: #343a40; /* Match the dark gray/blue from the image */
-    padding: 20px; /* Add internal space around the content */
-    margin-bottom: 20px; /* Space between the form and the quick links */
-    border-radius: 6px; /* Optional: adds subtle rounding to the corners */
-}
+    #boxes .box img {
+        width: 60px; 
+        height: auto;
+        margin-bottom: 10px;
+        object-fit: contain;
+    }
 
-/* 2. Header Alignment (Send Me a Message) */
-.contact-form-container h3 {
-    color: white; /* Make the heading text stand out */
-    margin-top: 0; /* Remove default top margin */
-    margin-bottom: 18px; /* Space below the header */
-    padding-bottom: 8px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.06); /* Subtle divider */
-}
+    #boxes .box h3 {
+        margin: 15px 0;
+        color: #35424a;
+        font-size: 22px;
+    }
 
-/* 3. Input Alignment and label styling */
-.contact-form-container label,
-.contact-form-container .form-group-label {
-    display: block;
-    color: #ffffff;
-    padding: 6px 0; /* Add top/bottom padding to the label text */
-    margin-top: 12px; /* Space above each label block */
-    font-weight: 600;
-}
+    #boxes .box p {
+        color: #666;
+        line-height: 1.6;
+    }
 
-.contact-form-container input[type="text"],
-.contact-form-container input[type="email"],
-.contact-form-container textarea {
-    width: 100%;
-    padding: 10px;
-    border: 1px solid rgba(255,255,255,0.08);
-    border-radius: 4px;
-    background: #ffffff;
-    color: #222;
-    margin-bottom: 8px;
-}
+    /* Sidebar */
+    aside#sidebar{
+        /* Note: Sidebar padding/background now applied to its inner divs (.dark) */
+        width: 30%;
+        margin-top: 10px;
+        /* Remove padding/background here to let inner containers manage their look */
+        padding: 0; 
+        background: transparent;
+        border-radius: 8px;
+        box-shadow: none;
+    }
+    /* Ensure the .dark elements inside the sidebar are separated */
+    aside#sidebar .dark:first-child {
+        margin-top: 0;
+    }
+    aside#sidebar .dark {
+        margin-top: 20px; /* Space between the two dark boxes (form and links) */
+    }
 
-/* 4. Button Alignment */
-.contact-form-container button[type="submit"],
-.contact-form-container .button_1 {
-    display: block; /* Make the button take full width */
-    width: 100%; /* Stretch */
-    padding: 10px;
-    margin-top: 14px; /* Space above the button */
-    background: #e8491d; /* Orange/red background to match branding */
-    color: #ffffff;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    /* Styling for the forms inside the sidebar */
+    aside#sidebar .quote input, 
+    aside#sidebar .quote textarea{
+        width: 100%;
+        padding: 10px;
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+        border-radius: 4px;
+    }
 
-.contact-form-container button[type="submit"]:hover,
-.contact-form-container .button_1:hover {
-    background: #d43d15;
-}
+    /* Main-col */
+    article#main-col{
+        width: 65%;
+        padding: 20px;
+    }
 
-/* Quick links panel styling */
-.quick-links-container {
-    background-color: #343a40; /* Match the dark gray/blue */
-    padding: 20px; /* Adds internal space around the content */
-    border-radius: 6px;
-}
+    article#main-col h1 {
+        margin-top: 0;
+        color: #35424a;
+        margin-bottom: 20px;
+    }
 
-.quick-links-container h3 {
-    color: white;
-    margin-top: 0;
-    margin-bottom: 12px; /* Space below the header */
-}
+    /* Use flex layout for the main/content area so the sidebar and article align reliably */
+    main .container {
+        display: flex;
+        gap: 20px;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-bottom: 20px; /* Added padding to bottom of main container */
+    }
 
-.quick-links-container ul {
-    list-style: none; /* Remove bullet points */
-    padding: 0; /* Remove default left padding from the list */
-    margin: 0;
-}
+    main .container article#main-col {
+        width: 65%;
+    }
 
-.quick-links-container li a {
-    color: #a0a0a0; /* Example link color */
-    text-decoration: none;
-    display: block; /* Make the link a block element for full width clicking */
-    padding: 6px 0; /* Add vertical space between the links */
-}
+    main .container aside#sidebar {
+        width: 32%;
+    }
 
-.quick-links-container li a:hover {
-    color: white; /* Hover effect */
+    /* Services List (ul#services) */
+    ul#services {
+        display: block; /* Overrides the flex applied to #services container */
+    }
+    ul#services li{
+        list-style: none;
+        padding: 20px;
+        border: #e8491d solid 2px;
+        margin-bottom: 10px;
+        background: #f9f9f9;
+        border-radius: 4px;
+        transition: all 0.3s ease;
+    }
+
+    ul#services li:hover {
+        background: #fff;
+        border-color: #35424a;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+
+    ul#services li h4 {
+        color: #e8491d;
+        margin-bottom: 8px;
+    }
+
+    /* Footer */
+    footer{
+        padding: 20px;
+        margin-top: 20px;
+        color: #ffffff;
+        background-color: #35424a;
+        text-align: center;
+        border-top: 3px solid #e8491d;
+    }
+
+    footer p {
+        margin: 0;
+    }
+
+    /* Page Titles */
+    .page-title {
+        background: linear-gradient(135deg, #35424a 0%, #2a3338 100%);
+        color: #ffffff;
+        padding: 40px 20px;
+        text-align: center;
+        margin-bottom: 30px;
+    }
+
+    .page-title h1 {
+        margin: 0;
+        font-size: 40px;
+    }
+
+    /* Sections */
+    section {
+        margin: 20px 0;
+    }
+
+    section h2 {
+        color: #35424a;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 2px solid #e8491d;
+    }
+
+    /* --- CONTACT FORM & QUICK LINKS (FINAL FIXES) --- */
+
+    /* Contact form visual enhancements */
+    .contact-form-container {
+        /* Override .dark padding/background for custom look if needed, but here we just ensure separation */
+        padding: 20px;
+    }
+
+    /* Remove default dark styling from h3 inside the form container so it takes form-specific styling */
+    .contact-form-container h3 {
+        margin-top: 0;
+        margin-bottom: 18px; 
+        padding-bottom: 8px;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.06); 
+    }
+
+    /* Input Alignment and label styling */
+    .contact-form-container label,
+    .contact-form-container .form-group-label {
+        display: block;
+        color: #ffffff;
+        padding: 6px 0; 
+        margin-top: 15px; 
+        font-weight: 600;
+    }
+
+    .contact-form-container input[type="text"],
+    .contact-form-container input[type="email"],
+    .contact-form-container textarea {
+        width: 100%;
+        padding: 10px;
+        border: 1px solid rgba(255,255,255,0.08);
+        border-radius: 4px;
+        background: #ffffff;
+        color: #222;
+        margin-bottom: 8px;
+    }
+
+    /* Button Alignment */
+    .contact-form-container button[type="submit"] {
+        display: block; 
+        width: 100%; 
+        padding: 12px; 
+        margin-top: 20px; 
+    }
+
+    /* Quick links panel styling */
+    .quick-links-container {
+        /* Uses the default .dark style, but we ensure the header is clean */
+        padding: 20px;
+    }
+
+    .quick-links-container h3 {
+        color: white;
+        margin-top: 0;
+        margin-bottom: 15px; 
+    }
+
+    .quick-links-container ul {
+        list-style: none; 
+        padding: 0; 
+        margin: 0;
+    }
+
+    .quick-links-container li a {
+        color: #a0a0a0; 
+        text-decoration: none;
+        display: block; 
+        padding: 8px 0; 
+    }
+
+    .quick-links-container li a:hover {
+        color: #e8491d; /* Changed hover to your highlight color */
+    }
+
+
+    /* --- Media Queries (Responsiveness Fixes) --- */
+    @media(max-width: 768px){
+        header #branding,
+        header nav,
+        header nav li,
+        #contact h1,
+        #contact form,
+        #boxes .box,
+        article#main-col,
+        aside#sidebar{
+            float: none;
+            text-align: center;
+            width: 100%;
+        }
+
+        header nav ul{
+            display: flex;
+            gap: 12px;
+            align-items: center;
+            flex-wrap: wrap; 
+            justify-content: center;
+        }
+    
+        header .container {
+            /* On small screen, stack elements in the header vertically */
+            flex-direction: column;
+            text-align: center;
+        }
+    
+        header nav {
+            width: 100%;
+        }
+
+        /* Reduce hero title on small screens */
+        #showcase h1 {
+            font-size: 32px;
+        }
+
+        #showcase p {
+            font-size: 16px;
+        }
+
+        #contact {
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        #contact form {
+            flex-direction: column;
+            width: 100%;
+        }
+
+        #contact input[type="email"] {
+            width: 100%;
+        }
+
+        #contact button, .quote button{
+            display: block;
+            width: 100%;
+        }
+
+        /* Target the content area on mobile */
+        main .container {
+            flex-direction: column;
+            gap: 0;
+        }
+        main .container article#main-col {
+            width: 100%;
+        }
+        main .container aside#sidebar {
+            width: 100%;
+            margin-top: 20px;
+        }
+
+        nav ul {
+            flex-direction: column;
+        }
+
+        header nav ul li {
+            padding: 10px 0;
+        }
+
+        /* Ensure form and link containers stack nicely on mobile */
+        .contact-form-container,
+        .quick-links-container {
+            padding: 20px;
+            width: 100%;
+            box-sizing: border-box; /* Ensures padding is included in width */
+        }
+        aside#sidebar .dark {
+            margin-top: 20px;
+        }
+    }
 }
